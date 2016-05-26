@@ -3,9 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/labccet/Documents/ContaCorrente/src/contacorrente/ContaCorrente.java</file>
+            <file>file:/C:/Users/labccet/Documents/ContaCorrente/src/fachada/VerificadorDigitoBradesco.java</file>
             <file>file:/C:/Users/labccet/Documents/ContaCorrente/src/fachada/FachadaContaCorrente.java</file>
             <file>file:/C:/Users/labccet/Documents/ContaCorrente/test/fachada/FachadaContaCorrenteTest.java</file>
+            <file>file:/C:/Users/labccet/Documents/ContaCorrente/src/fachada/VerificadorDigitoBancoDoBrasil.java</file>
+            <file>file:/C:/Users/labccet/Documents/ContaCorrente/src/fachada/VerificadorDigitoSantander.java</file>
+            <file>file:/C:/Users/labccet/Documents/ContaCorrente/src/fachada/VerificadorDigitosBancario.java</file>
         </group>
     </open-files>
 </project-private>
