@@ -11,8 +11,6 @@ package fachada;
  */
 public class FachadaContaCorrente {
     
-   
-    
     /*
         Verificar se uma agencia é válida para um determinado banco
     */
@@ -20,48 +18,19 @@ public class FachadaContaCorrente {
         
         if(banco == 001)
         {
-            if(agencia.length() == 6)
-            {
-                char caracter = ' ';
-                int indice_agencia = 0;
-                int indice_numeros = 0;
-                int indice_produtos = 0;
-                int[] numeros = new int[5];
-                int[] produtos = new int[4];
-                int soma = 0;
-                int resto = 0;
-
-
-                while(indice_agencia<6)
-                {
-                    if(indice_agencia == 4)
-                    {
-                        indice_agencia++;
-                        continue;
-                    }
-
-                    caracter = agencia.charAt(indice_agencia);
-                    numeros[indice_numeros] = Character.getNumericValue(caracter);
-                    indice_agencia++; indice_numeros++;
-                }
-
-                for (indice_produtos=0; indice_produtos<4; indice_produtos++)
-                {
-                    int multiplicador = 5;
-                    produtos[indice_produtos] = numeros[indice_produtos] * multiplicador;
-                    multiplicador--;
-                }
-
-                for (indice_produtos=0; indice_produtos<produtos.length; indice_produtos++)
-                    soma = soma + produtos[indice_produtos];
-
-                resto = soma%11;
-
-                if(Character.getNumericValue(caracter) == (11-resto))
-                    return true;
-
-            }
+            return new VerificadorDigitoBancoDoBrasil().verificaAgencia(agencia);
         }
+        
+        if(banco == 033)
+        {
+            return new VerificadorDigitoSantander().verificaAgencia(agencia);
+        }
+        
+        if(banco == 237)
+        {
+            return new VerificadorDigitoBradesco().verificaAgencia(agencia);
+        }
+        
         
          return false;
     }
@@ -73,5 +42,6 @@ public class FachadaContaCorrente {
     public boolean verificarConta(int banco, String agencia, String conta){
         return false;
     }
-    
+
+       
 }
